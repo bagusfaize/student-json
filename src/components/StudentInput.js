@@ -33,12 +33,9 @@ export default function StudentInput(props) {
         temp[index] = value
         
         onSelect(temp);
-        console.log('clg temp child', value, temp, index)
 
     }
 
-    // console.log(`clg data ${studentIndex}`, data);
-    
     return (
         <div className='aspectInput'>
         <div className='studentName'>

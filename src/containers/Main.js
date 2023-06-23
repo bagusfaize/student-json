@@ -8,8 +8,6 @@ const ASPECTS = [1,2,3,4];
 export default function Home() {
   const [data, setData] = useState(STUDENTS.map(() => ASPECTS.map(() => 0)));
 
-  console.log('clg state', data);
-
   const handleSelect = (updatedData, index) => {
     let temp = [...data]
     temp[index] = updatedData
