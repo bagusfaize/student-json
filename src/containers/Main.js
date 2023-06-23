@@ -14,13 +14,12 @@ export default function Home() {
     let temp = [...data]
     temp[index] = updatedData
     setData(temp);
-    console.log('clg temp parent', temp, index)
   }
 
-  
-  const handleDownloadJSON = () => {
+  const aspectFormatter = () => {
     const result = {}
 
+    // format data into object
     ASPECTS.forEach((_, aspectsIndex) => {
       const aspectKey = `aspek_penilaian_${aspectsIndex+1}`;
       result[aspectKey] = {}
@@ -31,6 +30,27 @@ export default function Home() {
       })
     })
     // console.log('clg result', result);
+
+    return result;
+  }
+  
+  const handleDownloadJSON = () => {
+
+    // create downloadable json
+    const fileName = "penilaian_mahasiswa";
+    const json = JSON.stringify(aspectFormatter(), null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const href = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = href;
+    link.download = fileName + ".json";
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+    URL.revokeObjectURL(href);
+
   }
 
   const handleReset = () => {
@@ -65,7 +85,7 @@ export default function Home() {
         <button
          onClick={handleDownloadJSON}  
         >
-          SUBMIT
+          SIMPAN
         </button>
       </div>
 
