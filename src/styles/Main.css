@@ -1,3 +1,49 @@
 .App {
+  color: #555f63;
+  background: #edf2f7;
+  padding: 2rem 0;
   text-align: center;
+}
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30rem;
+  margin: 1rem auto;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  justify-content: flex-end;
+  padding-right: 3rem;
+}
+
+.header .title {
+  font-weight: 600;
+  font-size: .8rem;
+  margin: 0 0.8rem;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 1rem;
+  background-color: #0984e3;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #0872c4;
 }

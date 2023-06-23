@@ -61,9 +61,14 @@ export default function Home() {
   return (
     <div className='App'>
       <div>
-        <div>Aplikasi Penilaian Mahasiswa</div>
+        <h3>Aplikasi Penilaian Mahasiswa</h3>
       </div>
-      <div>
+      <div className='contentWrapper'>
+        <div className='header'>
+          {ASPECTS.map((value) => {
+            return <span className='title'>ASPEK {value}</span>
+          })}
+        </div>
         {
           STUDENTS.map((item,i) => {
             return(
@@ -77,16 +82,14 @@ export default function Home() {
             )
           })
         }
-        <button 
-          onClick={handleReset}
-        >
-          RESET
-        </button>
-        <button
-         onClick={handleDownloadJSON}  
-        >
-          SIMPAN
-        </button>
+        <div className='buttonWrapper'>
+          <button onClick={handleReset}>
+            RESET
+          </button>
+          <button onClick={handleDownloadJSON}>
+            SIMPAN
+          </button>
+        </div>
       </div>
 
     </div>

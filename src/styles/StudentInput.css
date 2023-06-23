@@ -1,3 +1,51 @@
 .aspectInput {
-  display: inline-flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin: 0.5rem auto;
+  padding: 0.75rem 1rem;
+  border-radius: 7px;
+  box-shadow:
+  7.5px 6.3px 10px rgba(0, 0, 0, 0.01),
+  60px 50px 80px rgba(0, 0, 0, 0.015);
+}
+
+.studentName .icon {
+  margin-right: .5rem;
+}
+
+select {
+  color: #555f63;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.selectWrapper {
+  display: flex;
+}
+
+.customSelect {
+  position: relative;
+  border: 1px solid #c7d2d7;
+  border-radius: 0.25em;
+  padding: 0.2em 0.5rem;
+  margin-right: 0.5rem;
+  font-size: .9rem;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.arrow {
+  right: 3px;
+  position: absolute;
 }
