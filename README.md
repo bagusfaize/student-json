@@ -1,6 +1,6 @@
 # Aplikasi Penilaian dengan output downloadable JSON
 
-Preview on Vercel ([Student JSON on Vercel](https://student-json.vercel.app/)).
+Preview on Vercel ([https://student-json.vercel.app/](https://student-json.vercel.app/)).
 
 ## App Preview
 
